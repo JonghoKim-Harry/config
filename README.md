@@ -1,7 +1,9 @@
 <!--    GUIDE TO USE GITHUB MARKDOWN
   
 Code Block
-    ''' my code '''
+    '''
+    my code 
+    '''
 
 Emoji
     http://www.emoji-cheat-sheet.com/
@@ -10,8 +12,12 @@ Emoji
 My Config
 ==============================================
 ##How to install?
-```git clone https://github.com/BellScurry/config```
-```~/config/install.sh```
+```
+git clone https://github.com/BellScurry/config
+```
+```
+~/config/install.sh
+```
 
 ##This repository consists of
 
