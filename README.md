@@ -12,8 +12,14 @@ Emoji
 My Config
 ==============================================
 ##How to install?
+
+Clone this repository into local.
 ```
 git clone https://github.com/BellScurry/config
+```
+
+Installation
+```
 ~/config/install.sh
 ```
 
