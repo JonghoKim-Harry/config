@@ -1,9 +1,18 @@
-<!--    This is comment for github markdown. -->
+<!--
+    GUIDE TO USE GITHUB MARKDOWN
+    
+    http://www.emoji-cheat-sheet.com/
+-->
+
 My Config
 ==============================================
 ##How to install?
+```
 git clone https://github.com/BellScurry/config
+```
+```
 ~/config/install.sh
+```
 
 ##This repository consists of
 
