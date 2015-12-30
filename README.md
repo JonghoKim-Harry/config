@@ -1,4 +1,4 @@
-[//] # (This is comment for github markdown)
+<!--    This is comment for github markdown. -->
 My Config
 ==============================================
 ##How to install?
