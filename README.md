@@ -1,5 +1,6 @@
+[//] # (This is comment for github markdown)
 My Config
-============
+==============================================
 ##How to install?
 git clone https://github.com/BellScurry/config
 ~/config/install.sh
