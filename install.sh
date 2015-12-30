@@ -17,7 +17,6 @@ vim +PluginInstall +qall
 
 ####    Git Setup
 cp .gitconfig ~/
-cp .mailmap ~/
 
 ####    Bash Setup
 cp .profile ~/
