@@ -10,6 +10,10 @@ if [ -e ~/.gitconfig ]; then
     rm ~/.gitconfig
 fi
 
+if [ -e ~/.mailmap ]; then
+    rm ~/.mailmap
+fi
+
 if [ -e ~/.bashrc ]; then
     rm ~/.bashrc
 fi
