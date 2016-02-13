@@ -15,12 +15,12 @@ My Config
 
 Clone this repository into local.
 ```
-git clone https://github.com/BellScurry/config
+$ git clone https://github.com/BellScurry/config
 ```
 
 Installation
 ```
-~/config/install.sh
+$ ~/config/install.sh
 ```
 
 ##This repository consists of
