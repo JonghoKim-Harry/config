@@ -7,3 +7,5 @@
 	ui = auto
 [log]
 	mailmap = true
+[core]
+	fileMode = true
