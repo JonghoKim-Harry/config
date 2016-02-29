@@ -1,11 +1,9 @@
-execute pathogen#infect()
-
 set nocompatible
 filetype off                " required
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-    Plugin 'VundleVim/Vundle.vim'
+    Plugin 'gmarik/Vundle.vim'
     Plugin 'scrooloose/nerdtree'
     Plugin 'tpope/vim-fugitive'
     Plugin 'L9'
@@ -18,7 +16,6 @@ filetype plugin indent on   " required
 map <C-N> :NERDTreeToggle <CR>
 
 colorscheme molokai
-highlight Comment cterm=bold
 
 " Enable 256 colors in Vim
 set t_Co=256
@@ -37,12 +34,3 @@ set ruler
 set fileencoding=utf-8
 set hlsearch
 set fencs=utf-8
-
-autocmd BufReadPre SConstruct set filetype=python
-autocmd BufReadPre SConscript set filetype=python
-
-" ctags
-set tags=./tags
-map <C-\> :botright vs <CR>:exec("tj ".expand("<cword>"))<CR>
-map <leader><C-\> :tab split<CR>:exec("tj ".expand("<cword>"))<CR>
-
