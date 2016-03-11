@@ -18,6 +18,9 @@ vim +PluginInstall +qall
 ####    Git Setup
 cp .gitconfig ~/
 
+####    Terminal Markdown Viewer Setup
+#git clone https://github.com/axiros/terminal_markdown_viewer.git
+
 ####    Bash Setup
 cp .profile ~/
 cp .bashrc ~/
