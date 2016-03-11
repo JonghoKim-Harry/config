@@ -26,13 +26,13 @@ $ ~/config/install.sh
 ##This repository consists of
 
 * Shell Settings
-   * .profile
-   * .bashrc
+  * .profile
+  * .bashrc
 * Vim Settings
-   * .vimrc
-   * .vim
+  * .vimrc
+  * .vim
 * Git Settings
-   * .gitconfig
+  * .gitconfig
 
 ###Vim Plugins
 
