@@ -19,6 +19,11 @@ vim +PluginInstall +qall
 cp .gitconfig ~/
 
 ####    Terminal Markdown Viewer Setup
+#CentOS/RHEL 7
+#yum install -y python python-pip
+#pip install markdown
+#pip install pygments
+#pip install yaml
 #git clone https://github.com/axiros/terminal_markdown_viewer.git
 
 ####    Bash Setup
