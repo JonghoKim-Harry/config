@@ -2,9 +2,9 @@ cd $(dirname $(readlink -f $0))
 
 ####    Package Installation
 if command -v apt-get > /dev/null; then #   Ubuntu
-    sudo apt-get install -y ruby
+    sudo apt-get install -y git ruby
 elif command -v yum > /dev/null; then   #   CentOS / RHEL
-    sudo yum install -y ruby
+    sudo yum install -y git ruby
 fi
 
 ####    Vim Setup
