@@ -4,7 +4,8 @@ cd $(dirname $(readlink -f $0))
 if command -v apt-get > /dev/null; then #   Ubuntu
     sudo apt-get install -y git ruby
 elif command -v yum > /dev/null; then   #   CentOS / RHEL
-    sudo yum install -y git ruby
+    sudo yum install -y wget
+    sudo yum install -y git vim-enhanced ruby
 fi
 
 ####    Vim Setup
