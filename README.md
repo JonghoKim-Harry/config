@@ -14,17 +14,21 @@ My Config
 ##How to install?
 
 Clone this repository into local.
-```
+```sh
 $ git clone https://github.com/BellScurry/config
 ```
 
 Installation
-```
+```sh
 $ ~/config/install.sh
 ```
 
 ##This repository consists of
 
+* Package Installation
+  * (Git)
+  * Vim
+  * Ruby
 * Shell Settings
   * .profile
   * .bashrc
