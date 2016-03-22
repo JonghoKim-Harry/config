@@ -1,18 +1,20 @@
-cd $(dirname $(readlink -f $0))
-
-####    Package Installation
+##    Package Installation
 if command -v apt-get > /dev/null; then #   Ubuntu
-    sudo apt-get install -y git ruby
+    sudo apt-get install -y git vim ruby
 elif command -v yum > /dev/null; then   #   CentOS / RHEL
     sudo yum install -y wget
     sudo yum install -y git vim-enhanced ruby
 fi
 
-####    Vim Setup
+##    SETUP: Vim, Git, Bash
+cd $(dirname $(readlink -f $0))
 cp .vimrc ~/
 cp -R .vim ~/
+cp .gitconfig ~/
+cp .profile ~/
+cp .bashrc ~/
 
-########    Essential Plugin: Vundle
+####    Essential Vim Plugin: Vundle
 if [ "$(ls -A ~/.vim/bundle/Vundle.vim)" ]; then
     echo "Vundle is already installed"
 else
@@ -22,13 +24,6 @@ else
 fi
 
 vim +PluginInstall +qall
-
-####    Git Setup
-cp .gitconfig ~/
-
-####    Bash Setup
-cp .profile ~/
-cp .bashrc ~/
 
 ####    Terminal Markdown Viewer Setup
 #CentOS/RHEL 7
