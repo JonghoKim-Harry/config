@@ -1,5 +1,12 @@
 cd $(dirname $(readlink -f $0))
 
+####    Package Installation
+if command -v apt-get > /dev/null; then #   Ubuntu
+    sudo apt-get install -y ruby
+elif command -v yum > /dev/null; then   #   CentOS / RHEL
+    sudo yum install -y ruby
+fi
+
 ####    Vim Setup
 cp .vimrc ~/
 cp -R .vim ~/
@@ -18,12 +25,12 @@ vim +PluginInstall +qall
 ####    Git Setup
 cp .gitconfig ~/
 
+####    Bash Setup
+cp .profile ~/
+cp .bashrc ~/
+
 ####    Terminal Markdown Viewer Setup
 #CentOS/RHEL 7
 #sudo yum install -y python python-pip
 #sudo pip install markdown pygments pyyaml
 #git clone https://github.com/axiros/terminal_markdown_viewer.git
-
-####    Bash Setup
-cp .profile ~/
-cp .bashrc ~/
