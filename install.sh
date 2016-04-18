@@ -1,7 +1,9 @@
 ##    Package Installation
-if command -v apt-get > /dev/null; then #   Ubuntu
+if [ -e /etc/debian_version ]; then     #   Debian
+    sudo apt-get update
     sudo apt-get install -y git vim ruby
 elif command -v yum > /dev/null; then   #   CentOS / RHEL
+    sudo yum update -y
     sudo yum install -y wget
     sudo yum install -y git vim-enhanced ruby
 fi
@@ -30,3 +32,5 @@ vim +PluginInstall +qall
 #sudo yum install -y python python-pip
 #sudo pip install markdown pygments pyyaml
 #git clone https://github.com/axiros/terminal_markdown_viewer.git
+#if command -v apt-get > /dev/null; then #   Ubuntu
+#elif command -v yum > /dev/null; then   #   CentOS / RHEL
