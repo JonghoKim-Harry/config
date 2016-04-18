@@ -47,3 +47,12 @@ $ ~/config/install.sh
 ###Vim Color Scheme
 
 * molokai
+
+
+##Git User Info
+Type in _.gitconfig_,
+```.gitconfig
+[user]
+    name=<your username for git>
+    email=<your email for git>
+```
