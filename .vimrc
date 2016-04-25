@@ -5,6 +5,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
     Plugin 'gmarik/Vundle.vim'
     Plugin 'scrooloose/nerdtree'
+    Plugin 'vim-airline/vim-airline'
+    Plugin 'vim-airline/vim-airline-themes'
     Plugin 'tpope/vim-fugitive'
     Plugin 'L9'
     Plugin 'git://git.wincent.com/command-t.git'
@@ -21,10 +23,11 @@ colorscheme molokai
 set t_Co=256
 
 syntax on
+set laststatus=2
+set number
 set autoindent
 set cindent
 set smartindent
-set number
 set expandtab
 set tabstop=4
 set shiftwidth=4
