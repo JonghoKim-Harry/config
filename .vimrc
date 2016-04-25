@@ -21,6 +21,7 @@ colorscheme molokai
 
 " Enable 256 colors in Vim
 set t_Co=256
+let g:airline_powerline_fonts=1     "   Support smoothe arrow effects for vim-airline
 
 syntax on
 set laststatus=2
