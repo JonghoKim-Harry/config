@@ -25,8 +25,9 @@ let g:airline_powerline_fonts=1		"    Support smoothe arrow effects for vim-airl
 let g:airline_theme='lucius'		"    air-line theme: lucius
 
 syntax on
-set laststatus=2
+set laststatus=2                    "   For vim-airline to always display status line.
 set number
+set tags=tags;                      "   To make ctags find tag file going up from current directory.
 set autoindent
 set cindent
 set smartindent
@@ -39,3 +40,5 @@ set ruler
 set fileencoding=utf-8
 set hlsearch
 set fencs=utf-8
+
+
