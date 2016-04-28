@@ -117,3 +117,6 @@ fi
 umask 022
 
 TERM=xterm-256color
+
+# Enable cscope to use vim as editor
+export CSCOPE_EDITOR=/usr/bin/vim
