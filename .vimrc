@@ -40,5 +40,3 @@ set ruler
 set fileencoding=utf-8
 set hlsearch
 set fencs=utf-8
-
-
