@@ -40,3 +40,16 @@ set ruler
 set fileencoding=utf-8
 set hlsearch
 set fencs=utf-8
+
+" Autoload cscope database.
+function! LoadCscope()
+    let db=findfile("cscope.out", ".;")
+    if (!empty(db))
+        let path=strpart(db, 0, match(db, "/cscope.out$"))
+        set nocscopeverbose " suppress 'duplicate connection' error
+        exe "cs add " . db " " . path
+        set cscopeverbose
+    endif
+endfunction
+" Call LoadCscope()
+au BufEnter
