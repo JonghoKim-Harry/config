@@ -1,7 +1,15 @@
 ##    Package Installation
 if [ -e /etc/debian_version ]; then     #   Debian
+    
     sudo apt-get update
     sudo apt-get install -y git vim ruby ctags
+ 
+    # Install lrzsz (ZMODEM)
+    sudo apt-get install -y lrzsz
+
+    # Install prerequisites for gem5
+    sudo apt-get install -y git build-essential g++ zlib1g-dev scons m4 swig python-dev
+
 elif command -v yum > /dev/null; then   #   CentOS / RHEL
     sudo yum update -y
     sudo yum install -y wget
