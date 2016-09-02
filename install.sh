@@ -10,6 +10,9 @@ if [ -e /etc/debian_version ]; then     #   Debian
     # Install prerequisites for gem5
     sudo apt-get install -y git build-essential g++ zlib1g-dev scons m4 swig python-dev
 
+    # ARM toolchain
+    sudo apt-get install -y gcc-arm-linux-gnueabi
+
 elif command -v yum > /dev/null; then   #   CentOS / RHEL
     sudo yum update -y
     sudo yum install -y wget
