@@ -40,3 +40,4 @@ set ruler
 set fileencoding=utf-8
 set hlsearch
 set fencs=utf-8
+set cc=80                           " colorcolumn=80 : To make 80-column indication
