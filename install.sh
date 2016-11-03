@@ -19,24 +19,10 @@ elif command -v yum > /dev/null; then   #   CentOS / RHEL
     sudo yum install -y git vim-enhanced ruby ctags
 fi
 
-##    SETUP: Vim, Git, Bash
-cd $(dirname $(readlink -f $0))
-cp .vimrc ~/
-cp -R .vim ~/
-cp .gitconfig ~/
-cp .profile ~/
-cp .bashrc ~/
-
-####    Essential Vim Plugin: Vundle
-if [ "$(ls -A ~/.vim/bundle/Vundle.vim)" ]; then
-    echo "Vundle is already installed"
-else
-    echo "Vundle is not found. Install vundle..."
-    mkdir -p ~/.vim/bundle
-    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-fi
-
-vim +PluginInstall +qall
+WHERE_AM_I=$(dirname $(readlink -f $0))
+source $WHERE_AM_I/script/setup_vim.sh
+source $WHERE_AM_I/script/setup_git.sh
+source $WHERE_AM_I/script/setup_bash.sh
 
 ####    Terminal Markdown Viewer Setup
 #CentOS/RHEL 7
