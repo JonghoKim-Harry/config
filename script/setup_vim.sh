@@ -12,3 +12,6 @@ else
 fi
 
 vim +PluginInstall +qall
+
+## Cscope Set up
+cp $MY_PARENT/mkcscope.sh $HOME/usr/bin

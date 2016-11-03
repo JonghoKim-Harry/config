@@ -41,3 +41,17 @@ set fileencoding=utf-8
 set hlsearch
 set fencs=utf-8
 set cc=80                           " colorcolumn=80 : To make 80-column indication
+
+""" Set up CSCOPE
+"set csprg=/usr/bin/cscope 
+set csprg=$HOME/usr/bin/cscope 
+set csto=0 
+set cst 
+set nocsverb 
+if filereadable("./cscope.out") 
+    cs add cscope.out 
+else 
+    cs add /usr/src/linux/cscope.out 
+endif 
+set csverb
+set nocscopeverbose
