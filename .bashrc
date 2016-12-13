@@ -120,3 +120,6 @@ TERM=xterm-256color
 
 # Enable cscope to use vim as editor
 export CSCOPE_EDITOR=/usr/bin/vim
+
+# JONGHO: For tmux
+alias tmux="TERM=screen-256color-bce tmux"
