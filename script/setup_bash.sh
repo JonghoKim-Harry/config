@@ -6,3 +6,6 @@ PROJECT_HOME=$(dirname $MY_PARENT)
 cp $PROJECT_HOME/.profile $HOME/
 cp $PROJECT_HOME/.bashrc $HOME/
 cp $PROJECT_HOME/.tmux.conf $HOME/
+
+# Activate copied config files
+source $HOME/.bashrc
