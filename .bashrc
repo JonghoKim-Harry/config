@@ -35,9 +35,12 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
+# For tmux
+export TERM=screen-256color
+
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color) color_prompt=yes;;
+    xterm-color|*-256color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -84,6 +87,9 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
+# colored GCC warnings and errors
+#export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
@@ -113,14 +119,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Default Permission: 755
-umask 022
-
-TERM=xterm-256color
-
-# Enable cscope to use vim as editor
-export CSCOPE_EDITOR=/usr/bin/vim
-
-# JONGHO: Path for local install
-export PATH=$PATH:$HOME/usr/bin
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu
+export PATH=$PATH:$HOME/usr/bin:$HOME/usr/sbin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu:$HOME/usr/lib/x86_64-linux-gnu:$HOME/usr/lib64
