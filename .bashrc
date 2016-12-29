@@ -121,9 +121,6 @@ TERM=xterm-256color
 # Enable cscope to use vim as editor
 export CSCOPE_EDITOR=/usr/bin/vim
 
-# JONGHO: For tmux
-alias tmux="TERM=screen-256color-bce tmux"
-
 # JONGHO: Path for local install
 export PATH=$PATH:$HOME/usr/bin
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu
