@@ -8,6 +8,7 @@ call vundle#begin()
     Plugin 'vim-airline/vim-airline'
     Plugin 'vim-airline/vim-airline-themes'
     Plugin 'tpope/vim-fugitive'
+    Plugin 'flazz/vim-colorschemes'
     Plugin 'L9'
     Plugin 'git://git.wincent.com/command-t.git'
     Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -17,7 +18,15 @@ filetype plugin indent on   " required
 
 map <C-N> :NERDTreeToggle <CR>
 
-colorscheme molokai
+""" BLACK BACKGROUND
+colorscheme jellyx
+
+
+""" GRAY BACKGROUND
+"colorscheme lilypink
+"colorscheme jellybeans
+"colorscheme inori
+"colorscheme evening
 
 " Enable 256 colors in Vim
 set t_Co=256
@@ -55,3 +64,6 @@ else
 endif 
 set csverb
 set nocscopeverbose
+
+"""
+set lazyredraw
