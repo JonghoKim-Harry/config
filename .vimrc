@@ -19,14 +19,17 @@ filetype plugin indent on   " required
 map <C-N> :NERDTreeToggle <CR>
 
 """ BLACK BACKGROUND
-colorscheme jellyx
-
+colorscheme blackboard
+"colorscheme jellyx
+"colorscheme antares
+"colorscheme automation
 
 """ GRAY BACKGROUND
 "colorscheme lilypink
 "colorscheme jellybeans
 "colorscheme inori
 "colorscheme evening
+"colorscheme benlight
 
 " Enable 256 colors in Vim
 set t_Co=256
