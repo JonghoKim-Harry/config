@@ -19,10 +19,22 @@ elif command -v yum > /dev/null; then   #   CentOS / RHEL
     sudo yum install -y git vim-enhanced ruby ctags
 fi
 
-WHERE_AM_I=$(dirname $(readlink -f $0))
-source $WHERE_AM_I/script/setup_vim.sh
-source $WHERE_AM_I/script/setup_git.sh
-source $WHERE_AM_I/script/setup_bash.sh
+# Findout where this script is located
+pushd . > /dev/null
+PROJECT_HOME="${BASH_SOURCE[0]}";
+while([ -h "${PROJECT_HOME}" ]); do
+    cd "`dirname "${PROJECT_HOME}"`"
+    PROJECT_HOME="$(readlink "`basename "${PROJECT_HOME}"`")";
+done
+cd "`dirname "${PROJECT_HOME}"`" > /dev/null
+PROJECT_HOME="`pwd`";
+popd  > /dev/null
+echo "script=[${PROJECT_HOME}]"
+echo "pwd   =[`pwd`]"
+
+source $PROJECT_HOME/script/setup_vim.sh
+source $PROJECT_HOME/script/setup_git.sh
+source $PROJECT_HOME/script/setup_bash.sh
 
 ####    Terminal Markdown Viewer Setup
 #CentOS/RHEL 7
