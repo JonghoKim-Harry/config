@@ -119,5 +119,14 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Default Path: /bin, /sbin, /usr/bin, /usr/sbin
 export PATH=$PATH:$HOME/usr/bin:$HOME/usr/sbin
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu:$HOME/usr/lib/x86_64-linux-gnu:$HOME/usr/lib64
+
+# Default Path: /lib, /lib/x86_64-linux-gnu, /lib32, /lib64, /usr/lib, etc.
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/x86_64-linux-gnu:$HOME/lib:$HOME/usr/lib/x86_64-linux-gnu:$HOME/usr/lib64
+
+# Default Path: /usr/include
+export C_INCLUDE_PATH=$C_INCLUDE_PATH:$HOME/usr/include
+
+# Default Path: /usr/include
+export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:$HOME/usr/include
