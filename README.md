@@ -40,6 +40,8 @@ $ ~/config/install.sh
 
 ###Vim Plugins
 
+Global Vim Configuration File: /etc/vim/vimrc.local
+
 * Vundle
 * NerdTree
 * Several Color Schemes
