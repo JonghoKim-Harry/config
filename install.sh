@@ -5,6 +5,9 @@ if [ -e /etc/debian_version ]; then     #   Debian
     sudo apt-get update
     sudo apt-get install -y git vim ruby ctags
  
+    # Install tmux
+    sudo apt-get install -y tmux
+
     # Install lrzsz (ZMODEM)
     sudo apt-get install -y lrzsz
 
@@ -16,6 +19,7 @@ if [ -e /etc/debian_version ]; then     #   Debian
 
 elif command -v yum > /dev/null; then   #   CentOS / RHEL
     sudo yum update -y
+    sudo yum install -y tmux
     sudo yum install -y wget
     sudo yum install -y git vim-enhanced ruby ctags
 fi
