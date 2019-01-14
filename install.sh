@@ -1,3 +1,4 @@
+#!/bin/bash
 ##    Package Installation
 if [ -e /etc/debian_version ]; then     #   Debian
     

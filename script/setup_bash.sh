@@ -1,3 +1,8 @@
+#!/bin/bash
+
+# Set bash as default $SHELL
+sudo chsh -s /bin/bash $(whoami)
+
 # Findout where this script is located
 pushd . > /dev/null
 WHERE_AM_I="${BASH_SOURCE[0]}";

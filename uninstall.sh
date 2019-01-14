@@ -1,3 +1,4 @@
+#!/bin/bash
 if [ -e ~/.vimrc ]; then
     rm ~/.vimrc
 fi
