@@ -119,8 +119,11 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# TODO: Install Java
+export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_202/
+
 # Default Path: /bin, /sbin, /usr/bin, /usr/sbin
-export PATH=$PATH:$HOME/usr/bin:$HOME/usr/sbin
+export PATH=$PATH:$HOME/usr/bin:$HOME/usr/sbin:$JAVA_HOME/bin
 
 # Default Path: /lib, /usr/lib/local, /lib/x86_64-linux-gnu, /lib32, etc.
 export LIBRARY_PATH=$LIBRARY_PATH:$HOME/lib:$HOME/usr/lib:$HOME/usr/lib/x86_64-linux-gnu:$HOME/usr/lib/x86_64-linux-gnu:$HOME/usr/lib64:$HOME/usr/local/lib
