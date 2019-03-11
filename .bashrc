@@ -1,3 +1,4 @@
+#!/bin/bash
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -119,20 +120,28 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# TODO: Install Java
+# In order to make 'ls' to sort capitalized letters first
+export LC_ALL="C"
+
+#
+#   TODO: Install Java and To Modify JAVA_HOME
+#
 export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_202/
+export PATH=$PATH:$JAVA_HOME/bin
 
-# Default Path: /bin, /sbin, /usr/bin, /usr/sbin
-export PATH=$PATH:$HOME/usr/bin:$HOME/usr/sbin:$JAVA_HOME/bin
-
-# Default Path: /lib, /usr/lib/local, /lib/x86_64-linux-gnu, /lib32, etc.
-export LIBRARY_PATH=$LIBRARY_PATH:$HOME/lib:$HOME/usr/lib:$HOME/usr/lib/x86_64-linux-gnu:$HOME/usr/lib/x86_64-linux-gnu:$HOME/usr/lib64:$HOME/usr/local/lib
-
-# Default Path: /lib, /usr/lib/local, /lib/x86_64-linux-gnu, /lib32, etc.
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/lib:$HOME/usr/lib:$HOME/usr/lib/x86_64-linux-gnu:$HOME/usr/lib/x86_64-linux-gnu:$HOME/usr/lib64:$HOME/usr/local/lib
-
-# Default Path: /usr/include, /usr/local/include
+#
+#   $HOME Installation
+#
+export PATH=$PATH:$HOME/usr/bin:$HOME/usr/sbin
+export LIBRARY_PATH=$LIBRARY_PATH:$HOME/lib:$HOME/usr/lib:$HOME/usr/lib64:$HOME/usr/local/lib
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/lib:$HOME/usr/lib:$HOME/usr/lib/$(uname -i)-linux-gnu:$HOME/usr/lib/$(uname -i)-linux-gnu:$HOME/usr/lib64:$HOME/usr/local/lib
 export C_INCLUDE_PATH=$C_INCLUDE_PATH:$HOME/usr/include:$HOME/usr/local/include
-
-# Default Path: /usr/include, /usr/local/include
 export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:$HOME/usr/include:$HOME/usr/local/include
+
+#
+#   Architecture Specific Paths
+#
+export C_INCLUDE_PATH=$C_INCLUDE_PATH:/usr/include/$(uname -i)-linux-gnu
+export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/usr/include/$(uname -i)-linux-gnu
+export LIBRARY_PATH=$LIBRARY_PATH:/usr/lib/$(uname -i)-linux-gnu
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/$(uname -i)-linux-gnu
