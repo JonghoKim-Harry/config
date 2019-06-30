@@ -30,4 +30,4 @@ fi
 vim +PluginInstall +qall
 
 ## Cscope Set up
-cp $PROJECT_HOME/mkcscope.sh $HOME/usr/bin
+cp $PROJECT_HOME/mkcscope.sh $HOME/.mkcscope.sh
