@@ -1,7 +1,3 @@
-;; Make sure these two lines are at the top in order to speed up initialization
-(set load-path (cons "~/.emacs.d" load-path))
-(require 'gui-init)
-
 ;; Byte-compile
 (byte-recompile-directory (expand-file-name "~/.emacs.d") 0)
 
