@@ -59,3 +59,6 @@ do
 	cp $CONFIG_FILE ~
     fi
 done
+
+## Apply xmodmap file
+xmodmap ~/.Xmodmap
