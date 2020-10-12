@@ -1,0 +1,4 @@
+[submodule "spacemacs_release-0.200"]
+	path = spacemacs_release-0.200
+	url = https://github.com/syl20bnr/spacemacs.git
+	branch = release-0.200
