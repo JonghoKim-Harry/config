@@ -18,4 +18,7 @@ PROJECT_HOME=$(dirname $WHERE_AM_I)
 cp $PROJECT_HOME/.gitconfig $HOME/
 
 ## Git to encrypt credentials
-git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+#git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+sudo apt-get install git-crypt
+cp .gitattribute ~
+git-crypt status -f
