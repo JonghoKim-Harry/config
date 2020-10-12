@@ -21,4 +21,8 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
+# Open emacs in terminal
+alias emacs="emacs -nw"
+
+#
 TERM=xterm-256color
