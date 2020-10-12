@@ -64,5 +64,6 @@ done
 xmodmap ~/.Xmodmap
 
 ## Install spacemacs
-SPACEMACS=spacemacs_release-0.200
+#SPACEMACS=spacemacs_release-0.200
+SPACEMACS=spacemacs
 cp -R $SPACEMACS/* ~/.emacs.d
