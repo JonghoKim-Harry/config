@@ -48,3 +48,14 @@ source $PROJECT_HOME/script/setup_bash.sh
 #git clone https://github.com/axiros/terminal_markdown_viewer.git
 #if command -v apt-get > /dev/null; then #   Ubuntu
 #elif command -v yum > /dev/null; then   #   CentOS / RHEL
+
+## Copy dot files to home directory
+DOTFILES=$(ls -d .*)
+
+for CONFIG_FILE in $DOTFILE
+do
+    if [[ $CONFIG_FILE != "." && $CONFIG_FILE != ".." ]]
+    then
+	cp $CONFIG_FILE ~
+    fi
+done
