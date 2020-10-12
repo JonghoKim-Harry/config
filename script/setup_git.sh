@@ -16,3 +16,6 @@ echo "pwd   =[`pwd`]"
 PROJECT_HOME=$(dirname $WHERE_AM_I)
 
 cp $PROJECT_HOME/.gitconfig $HOME/
+
+## Git to encrypt credentials
+git config --global credential.helper /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
