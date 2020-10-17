@@ -1,0 +1,19 @@
+[global_config]
+  focus = system
+  suppress_multiple_term_dialog = True
+[keybindings]
+  full_screen = <Ctrl><Shift>F11
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    custom_command = 'echo \"foo#bar\"'
+    font = Fixed 10
+    foreground_color = "#FFFFFF"
