@@ -1,0 +1,4 @@
+# Ignore files created by autoconf
+autom4te.cache/
+config.log
+config.status
