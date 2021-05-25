@@ -2,7 +2,7 @@
 	email = scurry2119@gmail.com
 	name = "Jongho Kim"
 [credential]
-	helper = cache
+	helper = manager
 [color]
 	ui = auto
 [log]
