@@ -1,2 +1,3 @@
 #!/bin/bash
-env TERM=xterm-256color /bin/bash
+echo "export TERM=xterm-256color" >> ~/.bashrc
+source ~/.bashrc
