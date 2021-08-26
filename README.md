@@ -11,50 +11,29 @@ Emoji
 
 My Config
 ==============================================
-##How to install?
+## How to install?
 
 Clone this repository into local.
 ```sh
-$ git clone https://github.com/BellScurry/config
+$ git clone https://github.com/JONGHOKIM-raphael/config
 ```
 
-Installation
+Then run: 
 ```sh
-$ ~/config/install.sh
+TODO
 ```
 
-##This repository consists of
+## This repository consists of
 
 * Package Installation
-  * (Git)
-  * Vim
+  * (git: maybe installed to clone this repository)
+  * vim
+  * spacemacs (and emacs)
   * Ruby
-* Shell Settings
-  * .profile
-  * .bashrc
-* Vim Settings
-  * .vimrc
-  * .vim
-* Git Settings
-  * .gitconfig
 
-###Vim Plugins
-
-Global Vim Configuration File: /etc/vim/vimrc.local
-
-* Vundle
-* NerdTree
-* Several Color Schemes
-
-###Vim Color Scheme
-
-* molokai
-
-
-##Git User Info
-Type in _.gitconfig_,
-```.gitconfig
-[user]
-    name=<your username for git>
-    email=<your email for git>
-```
+* Setup Configurations For:
+  * git
+  * shell
+  * spacemacs (emacs)
+  * vim
+  
