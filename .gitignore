@@ -4,4 +4,4 @@ config.log
 config.status
 
 # Ignore dot files at root directory
-.*
+/.*
