@@ -1,4 +1,3 @@
-#!/bin/bash
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -35,9 +34,6 @@ shopt -s checkwinsize
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
-
-# For tmux
-export TERM=screen-256color
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
@@ -120,28 +116,48 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# In order to make 'ls' to sort capitalized letters first
-export LC_ALL="C"
+# Emacs
+alias emacs="emacs -nw"
+export TERM=xterm-256color
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/jongho-kim/google-cloud-sdk/path.bash.inc' ]; then . '/home/jongho-kim/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/jongho-kim/google-cloud-sdk/completion.bash.inc' ]; then . '/home/jongho-kim/google-cloud-sdk/completion.bash.inc'; fi
+
 
 #
-#   TODO: Install Java and To Modify JAVA_HOME
-#
-export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_202/
-export PATH=$PATH:$JAVA_HOME/bin
+export WINEARCH=win32 winetricks
 
 #
-#   $HOME Installation
-#
-export PATH=$PATH:$HOME/usr/bin:$HOME/usr/sbin
-export LIBRARY_PATH=$LIBRARY_PATH:$HOME/lib:$HOME/usr/lib:$HOME/usr/lib64:$HOME/usr/local/lib
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/lib:$HOME/usr/lib:$HOME/usr/lib/$(uname -i)-linux-gnu:$HOME/usr/lib/$(uname -i)-linux-gnu:$HOME/usr/lib64:$HOME/usr/local/lib
-export C_INCLUDE_PATH=$C_INCLUDE_PATH:$HOME/usr/include:$HOME/usr/local/include
-export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:$HOME/usr/include:$HOME/usr/local/include
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib:/usr/local/lib
+
+# Tibero6
+export TB_HOME=/etc/tibero/tibero6
+export TB_SID=tibero
+export TB_PROF_DIR=${TB_HOME}/bin/prof
+export PATH=$PATH:$TB_HOME/bin:$TB_HOME/client/bin
+export LD_LIBRARY_PATH=/usr/lib:/usr/local/lib:${TB_HOME}/lib:${TB_HOME}/client/lib:${LD_LIBRARY_PATH}
+export C_INCLUDE_PATH=$C_INCLUDE_PATH:$TB_HOME/include:$TB_HOME/client/include
+
 
 #
-#   Architecture Specific Paths
-#
-export C_INCLUDE_PATH=$C_INCLUDE_PATH:/usr/include/$(uname -i)-linux-gnu
-export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:/usr/include/$(uname -i)-linux-gnu
-export LIBRARY_PATH=$LIBRARY_PATH:/usr/lib/$(uname -i)-linux-gnu
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/$(uname -i)-linux-gnu
+export JAVA8_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
+export JAVA11_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
+export JAVA_HOME=${JAVA11_HOME}
+
+export CLASSPATH=${CLASSPATH}:${JAVA_HOME}/lib/javax.mail-1.6.2.jar:${JAVA_HOME}/lib/javaee-api-8.0.1.jar:${JAVA_HOME}/lib/activation-1.1.jar
+
+# Nutch
+export NUTCH_HOME=${HOME}/nutch
+
+#for f in "$NUTCH_HOME"/runtime/local/lib/*.jar; do
+#    CLASSPATH="${CLASSPATH}:$f";
+#done
+
+#export CLASSPATH="${CLASSPATH}:$NUTCH_HOME/runtime/local/conf"
+
+source "$HOME/.cargo/env"
+
+alias tbsql='rlwrap tbsql'
