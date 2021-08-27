@@ -1,0 +1,9 @@
+[user]
+	email = scurry2119@gmail.com
+	name = "Jongho Kim"
+[credential]
+	helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+[log]
+	mailmap = true
+[core]
+	fileMode = true
