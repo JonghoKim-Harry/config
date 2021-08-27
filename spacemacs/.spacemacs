@@ -326,6 +326,13 @@ executes.
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
 
+  ; See https://www.emacswiki.org/emacs/BackspaceKey
+  (normal-erase-is-backspace-mode 1)
+
+  ; See https://superuser.com/questions/710358/emacs-key-for-home-end
+  (global-set-key (<kbd> "<home>") `beginning-of-line)
+  (global-set-key (<kbd> "<end>" `end-of-line))
+
   "JONGHO: Indentation"
   (setq-default tab-width 4)
   (setq c-basic-offset 4)  ; C/C++/Java
@@ -338,7 +345,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (setq web-mode-css-indent-offset 4) ; web-mode, css in html file
   (setq web-mode-code-indent-offset 4) ; web-mode, js code in html file
   (setq css-indent-offset 4) ; css-mode
-  (setq yaml-indent-offset 4) ; YAML
+  (setq yaml-indent-offset 2) ; YAML
   (setq package-check-signature nil)
 
   "JONGHO: Preview markdown"
