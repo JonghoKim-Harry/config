@@ -1,7 +1,6 @@
-FROM ubuntu:18.04
+FROM ubuntu:18.04 AS git-image
 
-RUN apt-get update
-RUN apt-get install -y git git-crypt
+RUN apt-get update; apt-get install -y git git-crypt
 
-COPY .gitattributes /
-COPY .gitconfig /
+COPY .gitattributes /root
+COPY .gitconfig /root
