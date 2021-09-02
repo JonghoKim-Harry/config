@@ -1,0 +1,15 @@
+services:
+  git-image:
+    build:
+      context: ./git
+      target: git-image
+
+  emacs-image:
+    build:
+      context: ./emacs
+      target: emacs-image
+
+  spacemacs-image:
+    build:
+      context: ./spacemacs
+      target: spacemacs-image

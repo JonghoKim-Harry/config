@@ -14,13 +14,19 @@ My Config
 ## How to install?
 
 Clone this repository into local.
-```sh
+``` shell
 $ git clone https://github.com/JONGHOKIM-raphael/config
 ```
 
 Then run: 
-```sh
+``` shell
 TODO
+```
+
+## How to run with docker-compose?
+
+``` shell
+sudo apt-get install -y docker docker-compose
 ```
 
 ## This repository consists of
