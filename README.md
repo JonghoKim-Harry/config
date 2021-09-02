@@ -11,6 +11,11 @@ Emoji
 
 My Config
 ==============================================
+## Prerequisites
+ - docker
+ - docker-compose
+ - git
+
 ## How to install?
 
 Clone this repository into local.
@@ -18,10 +23,15 @@ Clone this repository into local.
 $ git clone https://github.com/JONGHOKIM-raphael/config
 ```
 
-Then run: 
+Then build with command:
 ``` shell
-TODO
+docker-compose build
 ```
+
+``` shell
+docker-compose run spacemacs
+```
+
 
 ## How to run with docker-compose?
 

@@ -1,15 +1,29 @@
+version: "2.0"    # https://docs.docker.com/compose/compose-file/compose-file-v2/#context
 services:
-  git-image:
-    build:
-      context: ./git
-      target: git-image
 
-  emacs-image:
-    build:
-      context: ./emacs
-      target: emacs-image
+  shell:
+    build: ./shell
+    image: shell-ubuntu:18.04
 
-  spacemacs-image:
-    build:
-      context: ./spacemacs
-      target: spacemacs-image
+  git:
+    build: ./git
+    image: git-ubuntu:18.04
+    depends_on:
+      - shell
+    
+  emacs:
+    build: ./emacs
+    image: emacs-ubuntu:18.04
+    depends_on:
+      - shell
+      - git
+
+  spacemacs:
+    build: ./spacemacs
+    image: spacemacs-ubuntu:18.04
+    depends_on:
+      - shell
+      - git
+      - emacs
+    ports:
+      - "50001:50001"
