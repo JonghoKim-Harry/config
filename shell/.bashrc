@@ -142,22 +142,9 @@ export LD_LIBRARY_PATH=/usr/lib:/usr/local/lib:${TB_HOME}/lib:${TB_HOME}/client/
 export C_INCLUDE_PATH=$C_INCLUDE_PATH:$TB_HOME/include:$TB_HOME/client/include
 
 
-#
+# Java
 export JAVA8_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
 export JAVA11_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
 export JAVA_HOME=${JAVA11_HOME}
-
-export CLASSPATH=${CLASSPATH}:${JAVA_HOME}/lib/javax.mail-1.6.2.jar:${JAVA_HOME}/lib/javaee-api-8.0.1.jar:${JAVA_HOME}/lib/activation-1.1.jar
-
-# Nutch
-export NUTCH_HOME=${HOME}/nutch
-
-#for f in "$NUTCH_HOME"/runtime/local/lib/*.jar; do
-#    CLASSPATH="${CLASSPATH}:$f";
-#done
-
-#export CLASSPATH="${CLASSPATH}:$NUTCH_HOME/runtime/local/conf"
-
-source "$HOME/.cargo/env"
 
 alias tbsql='rlwrap tbsql'
