@@ -330,8 +330,8 @@ before packages are loaded. If you are unsure, you should try in setting them in
   (normal-erase-is-backspace-mode 1)
 
   ; See https://superuser.com/questions/710358/emacs-key-for-home-end
-  (global-set-key (kbd "<home>") `beginning-of-line)
-  (global-set-key (kbd "<end>" `end-of-line))
+  (global-set-key   (kbd "<home>")   `beginning-of-line)
+  (global-set-key   (kbd "<end>")    `end-of-line)
 
   "JONGHO: Indentation"
   (setq-default tab-width 4)
