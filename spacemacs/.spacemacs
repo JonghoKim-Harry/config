@@ -366,6 +366,10 @@ This is the place where most of your configurations should be done. Unless it is
 explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
 
+  "Skip checking packages when starting up spacemacs"
+  ;
+  (setq package-check-signature nil)
+
   "JONGHO: Setup LSP"
   (use-package lsp-mode
     :init
