@@ -116,35 +116,38 @@ if ! shopt -oq posix; then
   fi
 fi
 
+
+#################################################################################
+#                                                                               #
+#    Those following aliases should be setup by Dockerfile                      #
+#                                                                               #
+#################################################################################
+
 # Emacs
-alias emacs="emacs -nw"
-export TERM=xterm-256color
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/jongho-kim/google-cloud-sdk/path.bash.inc' ]; then . '/home/jongho-kim/google-cloud-sdk/path.bash.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/jongho-kim/google-cloud-sdk/completion.bash.inc' ]; then . '/home/jongho-kim/google-cloud-sdk/completion.bash.inc'; fi
-
-
-#
-export WINEARCH=win32 winetricks
-
-#
-#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib:/usr/local/lib
+#alias emacs="emacs -nw"
 
 # Tibero6
-export TB_HOME=/etc/tibero/tibero6
-export TB_SID=tibero
-export TB_PROF_DIR=${TB_HOME}/bin/prof
-export PATH=$PATH:$TB_HOME/bin:$TB_HOME/client/bin
-export LD_LIBRARY_PATH=/usr/lib:/usr/local/lib:${TB_HOME}/lib:${TB_HOME}/client/lib:${LD_LIBRARY_PATH}
-export C_INCLUDE_PATH=$C_INCLUDE_PATH:$TB_HOME/include:$TB_HOME/client/include
+#alias tbsql='rlwrap tbsql'
 
+
+#################################################################################
+#                                                                               #
+#    Those following variables can be setup by Dockerfile                       #
+#                                                                               #
+#################################################################################
+
+# Termianl
+#export TERM=xterm-256color
+
+# Tibero6
+#export TB_HOME=/etc/tibero/tibero6
+#export TB_SID=tibero
+#export TB_PROF_DIR=${TB_HOME}/bin/prof
+#export PATH=$PATH:$TB_HOME/bin:$TB_HOME/client/bin
+#export LD_LIBRARY_PATH=${TB_HOME}/lib:${TB_HOME}/client/lib:${LD_LIBRARY_PATH}
+#export C_INCLUDE_PATH=$C_INCLUDE_PATH:$TB_HOME/include:$TB_HOME/client/include
 
 # Java
-export JAVA8_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
-export JAVA11_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
-export JAVA_HOME=${JAVA11_HOME}
-
-alias tbsql='rlwrap tbsql'
+#export JAVA8_HOME=/usr/lib/jvm/java-8-openjdk-amd64/
+#export JAVA11_HOME=/usr/lib/jvm/java-11-openjdk-amd64/
+#export JAVA_HOME=${JAVA11_HOME}
