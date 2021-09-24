@@ -326,13 +326,6 @@ executes.
 before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
 
-  ; See https://www.emacswiki.org/emacs/BackspaceKey
-  (normal-erase-is-backspace-mode 1)
-
-  ; See https://superuser.com/questions/710358/emacs-key-for-home-end
-  (global-set-key   (kbd "<home>")   `beginning-of-line)
-  (global-set-key   (kbd "<end>")    `end-of-line)
-
   "JONGHO: Indentation"
   (setq-default tab-width 4)
   (setq c-basic-offset 4)  ; C/C++/Java
@@ -369,6 +362,15 @@ you should place your code here."
   "Skip checking packages when starting up spacemacs"
   ;
   (setq package-check-signature nil)
+
+  "Keyboard mapping"
+  ; See: * https://www.emacswiki.org/emacs/BackspaceKey
+  ;      * https://stackoverflow.com/questions/29181067/backspace-key-deletes-following-character-not-preceding-character
+  (normal-erase-is-backspace-mode 0)
+
+  ; See https://superuser.com/questions/710358/emacs-key-for-home-end
+  (global-set-key (kbd "<home>") `beginning-of-line)
+  (global-set-key (kbd "<end>")  `end-of-line)
 
   "JONGHO: Setup LSP"
   (use-package lsp-mode
